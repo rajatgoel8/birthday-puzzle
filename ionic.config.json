@@ -1,0 +1,12 @@
+{
+  "name": "For Your Birthday Puzzle",
+  "app_id": "4c3cfc9b",
+  "integrations": {},
+  "type": "ionic1",
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}
