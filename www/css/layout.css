@@ -13,12 +13,20 @@ body {
 
 #container {
     background-color: #ccc;
-    padding-left: 5vw;
-    padding-right:5vw;
+    padding-left: 2vw;
+    padding-right:2vw;
 }
 
 #original {
     max-height: 75vh;
+}
+
+.bck {
+    width:100%;
+    height:66.67vh;
+    background:url('../img/bg.jpg') no-repeat center center;
+    background-size:cover;
+    overflow:hidden;
 }
 
 .matrix-row {
@@ -32,12 +40,12 @@ body {
 
 .matrix-cell-3 {
     max-height: 25vh;
-    max-width: 25vw;
+    max-width: 30vw;
 }
 
 .matrix-cell-4 {
     max-height: 18.75vh;
-    max-width: 18.75vw;
+    max-width: 22.75vw;
 }
 
 .matrix-cell.selected {

@@ -54,7 +54,7 @@ puzzleControllers.controller('PlayCtrl', ['$stateParams', '$scope', 'PuzzleMatri
     var onChange, partitions, initTime, timeInterval;
 
     partitions = parseInt($stateParams.size);
-
+    $scope.code = $stateParams.code;
     $scope.moves = 0;
     $scope.victory = false;
     $scope.imgSource =  'img/' + $stateParams.src;
@@ -121,7 +121,7 @@ puzzleControllers.controller('PlayCtrl', ['$stateParams', '$scope', 'PuzzleMatri
         $timeout(function () {
             $ionicPopup.alert({
                 templateUrl: 'partials/victory.html',
-                title: "Victory!",
+                title: "Yippee!",
                 scope: $scope
             });
 

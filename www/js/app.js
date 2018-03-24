@@ -15,8 +15,11 @@ angular.module('puzzleApp', ['ionic', 'puzzleControllers', 'puzzleServices'])
 	});
 })
 
-.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-
+.config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+	$ionicConfigProvider.backButton.previousTitleText(false);
+	$ionicConfigProvider.backButton.icon('ion-chevron-left');
+	$ionicConfigProvider.backButton.text('')
+	  
 	$stateProvider
 	.state('index', {
 		url: '/index',
@@ -36,7 +39,7 @@ angular.module('puzzleApp', ['ionic', 'puzzleControllers', 'puzzleServices'])
 		controller: 'SelectCtrl'
 	})
 	.state('play', {
-		url: '/puzzle/play/:size/:src',
+		url: '/puzzle/play/:size/:code/:src',
         cache: false,
 		templateUrl: 'partials/play.html',
 		controller: 'PlayCtrl'

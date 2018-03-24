@@ -117,10 +117,14 @@ puzzleServices.factory('AdService', function() {
 
 puzzleServices.factory('PuzzleManager', function() {
     var puzzles = [
-        {id: "Fuleco", src: "1.jpg", order: 0},
-        {id: "Scenery", src: "2.jpg", order: 1 },
-        {id: "Palace", src: "3.jpg", order: 2},
-        {id: "Troll", src: "4.jpg", order: 3, },
+        {id: "Day1", src: "1.jpg", order: 0, code: "5240", name: "Smile" },
+        {id: "Day2", src: "2.jpg", order: 1, code: "1984", name: "Talk" },
+        {id: "Day3", src: "3.jpg", order: 2, code: "0404", name: "Road Trip" },
+        {id: "Day4", src: "4.jpg", order: 3, code: "2054", name: "Cruize" },
+        {id: "Day5", src: "5.jpg", order: 4, code: "2552", name: "Hug" },
+        {id: "Day6", src: "6.jpg", order: 5, code: "4002", name: "Miss You" },
+        {id: "Day7", src: "7.jpg", order: 6, code: "8668", name: "Love You" },
+        {id: "Day8", src: "8.jpg", order: 7, code: "0486", name: "Birthday" },
     ];
 
     return {
@@ -140,7 +144,7 @@ puzzleServices.factory('PuzzleManager', function() {
             return session.unlocked || [];
         },
         isUnlocked: function(puzzle) {
-            if (puzzle.order < 2) {
+            if (puzzle.order < 1) {
                 return true;
             }
 

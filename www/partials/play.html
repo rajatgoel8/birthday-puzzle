@@ -1,9 +1,13 @@
-<ion-view view-title="Play">
-    <ion-header-bar class="bar-royal">
-        <h1 class="title">Play</h1>
+<ion-view view-title="Play it!">
+    <ion-header-bar class="bar-positive">
+        <ion-nav-bar class="bar-positive">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+        </ion-nav-bar>
+        <h1 class="title">Play it!</h1>
     </ion-header-bar>
     <ion-content>
-        <div class="row" id="container" ng-init="matrixClass='matrix-cell-' + partitions">
+        <div class="row1" id="container" ng-init="matrixClass='matrix-cell-' + partitions">
             <div class="col">
                 <div ng-show="originalShown" class="row matrix-row" ng-repeat-start="row in originalSources">
                     <img ng-src="{{ originalSources[$parent.$index][$index] }}" ng-click="cellClick($parent.$index, $index)" class="matrix-cell" ng-class="matrixClass" ng-repeat="col in row"  />
@@ -14,7 +18,6 @@
                 </div>
                 <div ng-show="containerShown" class="clearfix" ng-repeat-end></div>
             </div>
-
             <div class="col">
                 <div class="row">
                     <div class="col-50">

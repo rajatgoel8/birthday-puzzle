@@ -1,6 +1,10 @@
-<ion-view view-title="Select a difficulty">
-    <ion-header-bar class="bar-royal">
-        <h1 class="title">Select a difficulty</h1>
+<ion-view view-title="Select a difficulty level">
+    <ion-header-bar class="bar-positive">
+        <ion-nav-bar class="bar-positive">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+        </ion-nav-bar>
+        <h1 class="title">Select a difficulty level</h1>
     </ion-header-bar>
     <ion-content>
         <div class="row">
@@ -8,11 +12,11 @@
         </div>
         <div class="row">
             <div class="col col-50">
-                <a href="#{{ playableLevels.indexOf(3) >= 0 ? ('/puzzle/play/3/' + puzzle.src ) : '' }}"
+                <a href="#{{ playableLevels.indexOf(3) >= 0 ? ('/puzzle/play/3/' + puzzle.code + '/' + puzzle.src ) : '' }}"
                    class="button button-positive button-block play-btn" role="button">Play 3x3</a>
             </div>
             <div class="col col-50">
-                <a href="#{{ playableLevels.indexOf(4) >= 0 ? ('/puzzle/play/4/' + puzzle.src ) : '' }}"
+                <a href="#{{ playableLevels.indexOf(4) >= 0 ? ('/puzzle/play/4/' + puzzle.code + '/'  + puzzle.src ) : '' }}"
                    class="button button-positive button-block play-btn {{ playableLevels.indexOf(4) == -1 ? 'disabled' : '' }}" role="button">Play 4x4</a>
             </div>
         </div>
